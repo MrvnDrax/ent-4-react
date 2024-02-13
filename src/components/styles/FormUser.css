@@ -1,0 +1,94 @@
+.formUser-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--modal-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 200ms ease-in-out;
+  z-index: 2;
+}
+
+.close-form {
+  transform: scale(0);
+}
+
+.formUser {
+  width: 100%;
+  max-width: 300px;
+  padding: 2em 1.5em 2.5em;
+  border-radius: 0.7em;
+  background-color: var(--card-color);
+  position: relative;
+}
+
+.formUser__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.formUser__close {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 1em;
+  right: 1.5em;
+  cursor: pointer;
+  color: var(--bg-color);
+}
+
+.formUser__close:hover {
+  color: red;
+}
+
+.formUser__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.formUser__label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 1em;
+  color: var(--text-color);
+}
+
+.formUser__input {
+  padding: 0.4em 0.8em;
+  border-radius: 0.5em;
+  border: 0.1em solid #aaa;
+  background-color: var(--bg-color);
+  color: var(--card-color);
+}
+
+.formUser__btn {
+  width: 150px;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--paragraph-color);
+  color: var(--text-color-btn);
+  border-radius: 0 1em 0 1em;
+  margin: 2em 0 3em;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 1rem var(--card-color);
+  transition: filter .2s ease-in-out,
+              transform .2s ease-in-out; 
+}
+
+@media screen and (min-width: 1100px) {
+ 
+  .formUser__btn:hover {
+    filter: brightness(1.15);
+    transform: scale(1.08);
+  }
+
+}

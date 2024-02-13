@@ -1,0 +1,109 @@
+.card {
+  padding: 2.5em;
+  margin-bottom: 2em;
+  width: 325px;
+  border-radius: 0 2.5em 0 2.5em;
+  position: relative;
+  z-index: 1;
+  background-color: var(--card-color);
+  opacity: 0.95;
+  box-shadow: 5px 5px 1rem var(--title-color);
+}
+
+.card__header {
+  background-color: var(--title-color);
+  border-radius: 0 1rem 0 1em;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.card__footer-name {
+  text-align: center;
+  margin-top: 1em;
+  color: var(--text-color);
+}
+.card__footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.card__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__item {
+  padding-bottom: 0.5em;
+  color: var(--bg-color);
+  width: 200px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.card__value {
+  color: var(--text-color);
+  width: 200px;
+  text-align: end;
+  overflow: auto;
+}
+
+.card__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  aspect-ratio: 1.5;
+  font-size: 1.5rem;
+  border-radius: 0 .5em 0 .5em;
+  background-color: var(--bg-color);
+  color: var(--card-color);
+  transition: filter .2s ease-in-out;
+}
+
+.card__btn-delete{
+  color: rgb(124, 0, 0);
+}
+
+.card__hr {
+  margin: 1.5em 0;
+  border-color: var(--principal-color);
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 1100px) {
+  .card {
+    width: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: .5em 1.5em 2em;
+    box-shadow: none;    
+    transition: box-shadow .2s ease-in-out,
+                 transform .2s ease-in-out;
+  }
+
+  .card:hover {
+    box-shadow: 5px 5px 1rem var(--title-color);
+    transform: scale(1.03);
+  }
+
+  .card__btn:hover {
+    filter: contrast(1.8);
+  }
+}

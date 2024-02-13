@@ -1,0 +1,28 @@
+.title {
+  color: var(--card-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3em;
+  width: 100%;
+  max-width: 2048px;
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  z-index: 1;
+  max-width: 2048px;
+}

@@ -1,0 +1,100 @@
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--modal-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 200ms ease-in-out;
+}
+
+.modal__item {
+  width: 300px;
+  height: 175px;
+  border-radius: 0 1em 0 1em;
+  padding: 1.5em;
+  padding-top: 1em;
+  text-align: center;
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  box-shadow: 0 0 1em var(--title-color);
+}
+
+.modal__icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  aspect-ratio: 1;
+  margin-bottom: -10px;
+  color: var(--paragraph-color);
+}
+
+.modal__text {
+  color: var(--bg-color);
+}
+
+.modal__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 0 1em 0 1em;
+  background-color: var(--paragraph-color);
+  color: var(--card-color);
+  font-weight: 700;
+  transition: filter .2s ease-in-out,
+              transform .2s ease-in-out; 
+}
+
+.modal__container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.close-modal {
+  transform: scale(0);
+}
+
+
+
+@media screen and (min-width: 1100px) {
+ 
+  .modal__item {
+    width: 500px;
+    height: 200px;
+    gap: 0.3em;
+  }
+
+  .modal__icon {
+    font-size: 3rem;
+  }
+
+  .modal__text {
+    font-size: 1.3rem;
+  }
+
+  .modal__btn {
+    width: 125px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .modal__btn:hover {
+    filter: brightness(1.15);
+    transform: scale(1.08);
+  }
+
+
+}
